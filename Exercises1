@@ -1,0 +1,76 @@
+# Math exercises for my math course. 
+# 1:
+#
+import numpy as np
+# a)
+A = np.array([[3, 6]])
+B = np.array([[5], [2]])
+C = A.dot(B)
+print("a: \n", C)
+# b)
+C = B.dot(A)
+print("b: \n", C)
+# c) 
+print("c: NAN")
+# d)
+A = np.array([[1, 2], [3, 5]])
+B = np.array([[4], [6]])
+C = A.dot(B)
+print("d: \n", C)
+#e
+B = np.array([[4, 6]])
+C = B.dot(A)
+print("e: \n", C)
+#f
+A = (np.array([[4], [6]])).transpose()
+B = np.array([[1, 2], [3, 5]])
+C = np.array([[4], [6]])
+D = (A.dot(B)).dot(C)
+print("f: \n", D)
+
+#
+# 2
+#
+import numpy as np
+A = np.array([[1, 0], [0, 2], [3, 0]])
+B = np.array([[0, 4], [0, 5], [6, 0]])
+
+# a)
+print("a: \n", "NAN")
+# b)
+C = A*B
+print("b: \n", C)
+# c)
+D = A.transpose()
+C = D.dot(B)
+print("c: \n", C)
+# d) 
+D = B.transpose()
+C = A.dot(D)
+print("d: \n", C)
+# e)
+C = 10*A
+print("e: \n", C)
+# f)
+C = 10 + A
+print("f: \n",C)
+
+#
+# 3
+#
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.linspace(-2,2)
+Y = 1/(1 + np.exp(X))
+plt.plot(X,Y)
+
+#
+# 4
+#
+import numpy as np
+import matplotlib.pyplot as plt
+
+X = np.linspace(0,5)
+Y = (X**3+np.abs(X)+np.log(X + 10**(-8)))/(np.sqrt(100 + X)+0.01*X*np.exp(X))
+plt.plot(X,Y)
